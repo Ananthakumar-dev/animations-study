@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why choose me?</title>
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/why-choose-section.css" />
+  </head>
+  <body>
+    <div class="container why-choose">
+      <div class="why-choose-left">
+        <h1>Why Choose me for Full Stack Development?</h1>
+        <p>
+          I offers power-pack full stack marketplace development services for
+          several domains like html, css, javascript and such backend langauges
+          like Node Js, PHP and ruby on rails. I ready to build the required
+          platform over the client's preferred platform according to their
+          business goals. I design and develop an platform with Top-rated
+          features and functionalities to help you grab more users in your
+          marketplace or platform.
+        </p>
+      </div>
+
+      <div class="why-choose-right">
+        <div class="col col-1">
+          <div class="box">
+            <img src="../images/user-icon.png" alt="" />
+            <p>2+ years of experience</p>
+          </div>
+          <div class="box">
+            <img src="../images/user-icon.png" alt="" />
+            <p>2+ years of experience</p>
+          </div>
+          <div class="box">
+            <img src="../images/user-icon.png" alt="" />
+            <p>2+ years of experience</p>
+          </div>
+          <div class="box">
+            <img src="../images/user-icon.png" alt="" />
+            <p>2+ years of experience</p>
+          </div>
+        </div>
+        <div class="col col-2">
+          <div class="box">
+            <img src="../images/user-icon.png" alt="" />
+            <p>2+ years of experience</p>
+          </div>
+          <div class="box">
+            <img src="../images/user-icon.png" alt="" />
+            <p>2+ years of experience</p>
+          </div>
+          <div class="box">
+            <img src="../images/user-icon.png" alt="" />
+            <p>2+ years of experience</p>
+          </div>
+          <div class="box">
+            <img src="../images/user-icon.png" alt="" />
+            <p>2+ years of experience</p>
+          </div>
+        </div>
+        <div class="col col-3">
+          <div class="box">
+            <img src="../images/user-icon.png" alt="" />
+            <p>2+ years of experience</p>
+          </div>
+          <div class="box">
+            <img src="../images/user-icon.png" alt="" />
+            <p>2+ years of experience</p>
+          </div>
+          <div class="box">
+            <img src="../images/user-icon.png" alt="" />
+            <p>2+ years of experience</p>
+          </div>
+          <div class="box">
+            <img src="../images/user-icon.png" alt="" />
+            <p>2+ years of experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      const rightSection = document.querySelector(".why-choose-right");
+      rightSection.addEventListener("mouseenter", function () {
+        rightSection.classList.remove("leaving");
+        rightSection.classList.add("entering");
+      });
+
+      rightSection.addEventListener("mouseleave", function () {
+        rightSection.classList.remove("entering");
+        rightSection.classList.add("leaving");
+      });
+    </script>
+  </body>
+</html>
