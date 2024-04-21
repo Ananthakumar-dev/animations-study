@@ -1,0 +1,130 @@
+:root {
+  --default-animation-time: 0.4s;
+}
+
+.gallery-caption {
+  text-transform: uppercase;
+  color: #a5225a;
+  font-weight: 600;
+}
+
+.gallery-desc {
+  line-height: 1.7;
+  margin: 1rem 0 2rem 0;
+}
+
+.gallery {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 1.2rem;
+  /* grid-auto-rows: 40rem;
+  grid-auto-flow: dense; */
+}
+
+figure {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  height: 30rem;
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transform: scale(1.2);
+  transition: transform 0.4s ease-in-out;
+}
+
+figure figcaption {
+  position: absolute;
+  padding: 4.5rem 1.5rem;
+  inset: 0;
+  pointer-events: none;
+  color: #fff;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.main-heading {
+  margin-top: 1.7rem;
+}
+
+.main-caption {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.main-desc {
+  margin: 1.2rem 0;
+  letter-spacing: 1px;
+}
+
+figure main,
+figure footer {
+  opacity: 0;
+  transition: transform 0.4s ease-in-out;
+}
+
+figure main {
+  transform: translate3d(0, -1.6rem, 0);
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+figure footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translate3d(0, 1.6rem, 0);
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+figcaption::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(21, 22, 24, 0.24) 0%, #151618 100%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+figure:hover img {
+  transform: scale(1);
+}
+
+figure:hover figcaption::before {
+  opacity: 1;
+}
+
+figure:hover main,
+figure:hover footer {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.price-section p:nth-child(1) {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.price-section p:nth-child(2) {
+  font-size: 1.8rem;
+}
+
+.book-icon {
+  color: #fff;
+  font-size: 3rem;
+  opacity: 0;
+  transform: translate3d(-1.6rem, 0, 0);
+  transition: transform 0.4s ease-in-out 0.4s, opacity 0.4s ease-in-out 0.4s;
+}
+
+figure:hover .book-icon {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}

@@ -1,0 +1,29 @@
+.loading-container {
+  background-color: #0c0603;
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  display: grid;
+  place-content: center;
+}
+
+.loader {
+  height: 4rem;
+  width: 4rem;
+  border: 0.4rem solid #f27541;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-radius: 50%;
+  animation: 0.8s ease-in-out infinite alternate spinner;
+}
+
+@keyframes spinner {
+  /* from {
+    transform: rotate(0deg) scale(1);
+  } */
+
+  to {
+    /* transform: rotate(360deg) scale(1.2); */
+    transform: rotate(1turn) scale(1.2);
+  }
+}
